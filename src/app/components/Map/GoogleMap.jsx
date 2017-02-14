@@ -1,18 +1,23 @@
-import React from 'react';
-import {GoogleMap} from 'react-google-maps';
-import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
+import React                                from 'react';
+import {GoogleMap}                          from 'react-google-maps';
+import {Gmaps, Marker, InfoWindow, Circle}  from 'react-gmaps';
 
 const coords = {
-  lat: 51.5258541,
-  lng: -0.08040660000006028
+  lat:  48.856614,
+  lng: 2.352222
 };
 
 export default class GoogleM extends React.Component {
 
+    constructor(){
+        super();
+        this.state = {}
+    }
+
     onMapCreated(map) {
-    map.setOptions({
-      disableDefaultUI: true
-    });
+        map.setOptions({
+        disableDefaultUI: true
+        });
   }
 
   onDragEnd(e) {
@@ -28,9 +33,10 @@ export default class GoogleM extends React.Component {
   }
 
     render(){
+
+        console.log(this.props);
         return (
             <Gmaps
-                width={'80%'}
                 height={'75vh'}
                 lat={coords.lat}
                 lng={coords.lng}
@@ -43,16 +49,6 @@ export default class GoogleM extends React.Component {
                     lng={coords.lng}
                     draggable={true}
                     onDragEnd={this.onDragEnd} />
-                <InfoWindow
-                    lat={coords.lat}
-                    lng={coords.lng}
-                    content={'Hello, React :)'}
-                    onCloseClick={this.onCloseClick} />
-                <Circle
-                    lat={coords.lat}
-                    lng={coords.lng}
-                    radius={500}
-                    onClick={this.onClick} />
       </Gmaps>
         )
     }

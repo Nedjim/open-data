@@ -1,4 +1,11 @@
 body {
+    #main {
+        margin: 0 auto;
+        width: 80%;
+    }
+    h3 {
+        color: #3E2723;
+    }
     header {
         font-family: $rubik;
         padding: 0.5rem;
@@ -14,14 +21,10 @@ body {
             font-size: 1.3rem;
         }
     }
-    #search,
-    #map {
-        display: inline-block;
-    }
     #search {
         padding: 1rem;
         width: 15rem;
-        margin-right: 2rem;
+        margin-right: 3rem;
         input {
             width: 94%;
             height: 1.5rem;
@@ -46,7 +49,6 @@ body {
     }
     #map {
         margin-top: 2rem;
-        position: absolute;
-        width: 75%;
+        width: 60%;
     }
 }
