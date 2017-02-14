@@ -8,8 +8,10 @@ var config = {
     output: {
         path: DIST_DIR + '/app',
         filename: 'bundle.js',
-        publicPath: '/app/'
+        publicPath: '/app/',
+        sourceMapFilename: 'bundle.map'
     },
+    devtool: '#source-map',
     module: {
         loaders: [{
             test: /\.js?/,
@@ -20,7 +22,7 @@ var config = {
             },
         }, {
             test: /\.s?css$/,
-            loaders: ['style', 'css', 'sass'],
+            loaders: ['style-loader', 'css-loader', 'sass-loader'],
             include: path.join(__dirname, 'src')
         }]
     }
