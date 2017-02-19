@@ -18,7 +18,6 @@ export default class Search extends React.Component {
     create(){
         var url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=parks+in+Paris&key=AIzaSyDPU80o6EP72EteRY1C1CzHSImCm45g6f4";
         Request.get(url).then(data => {
-            //console.log(data);
             this.setState({parks: data.body.results});
          });
     }
@@ -26,10 +25,6 @@ export default class Search extends React.Component {
      updateSearch(event){
          this.setState({search: event.target.value.substr(0,20)});
      }
-
-    test(){
-        console.log(ok);
-    }
 
     render(){
          let filterParks = this.state.parks.filter(park => {

@@ -1,12 +1,23 @@
-# Open Data - Parcs et Jardins
+# Open Data - Parcs et Jardins de Paris
 
-Google place api
-- projet: open-Data
-- clé api: AIzaSyC6Xq-_vDJBiE8M6Uc2SgAS_d-N6ZC4HMs
-- installation de l'extension Cors
-- [exemple](https://developers.google.com/places/web-service/search?hl=fr)
-- [guide](https://developers.google.com/places/web-service/search?hl=fr)
-- [projet open data](https://console.developers.google.com/apis/api/places_backend/overview?project=open-data-157910&hl=fr&duration=PT1H)
+
+## 1 - Présentation
+
+Cette application indique les parcs et jardins de Paris.
+
+## 2 - Execution
+
 ```
-$ npm install react-google-map --save
+$ npm install
+$ npm start
 ```
+Aller à l'adresse: http://localhost:X
+
+## 3 - Technologies
+- API: Google Places
+- Reactjs
+- Webpack
+- Javascript / ES6
+- Sass
+
+
